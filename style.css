@@ -1,0 +1,87 @@
+/* imports  */
+@import url("https://fonts.googleapis.com/css2?family=Boldonse&family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Boldonse", system-ui;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: oklch(0.637 0.237 25.331);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 700px;
+  height: 400px;
+  background-color: oklch(0.936 0.032 17.717);
+  border-radius: 10px;
+  box-shadow: 3px 8px 49px 14px rgba(0, 0, 0, 0.3);
+  border: solid 1px #000;
+  h1 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  .people {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 2rem;
+    button {
+      font-family: inherit;
+      font-size: 1.5rem;
+      padding: 1rem 3rem;
+      border: 0.2px solid #000;
+      border-radius: 5px;
+      box-shadow: 3px 8px 49px 14px rgba(0, 0, 0, 0.1);
+      background-color: oklch(0.808 0.114 19.571);
+      cursor: pointer;
+
+      &:hover {
+        background-color: oklch(0.971 0.013 17.38);
+      }
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
+}
+
+/* media Queries  */
+
+@media only screen and (max-width: 760px) {
+  .container {
+    width: 600px;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 500px;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 300px;
+    height: 400px;
+
+    h1 {
+      font-size: 1rem;
+    }
+  }
+  .people {
+    flex-direction: column;
+  }
+}
